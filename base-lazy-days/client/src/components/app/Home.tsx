@@ -1,10 +1,13 @@
-import { Icon, Stack, Text } from '@chakra-ui/react';
-import { ReactElement } from 'react';
-import { GiFlowerPot } from 'react-icons/gi';
+import { Icon, Stack, Text } from "@chakra-ui/react";
+import { usePrefectchTreatments } from "components/treatments/hooks/useTreatments";
+import { ReactElement } from "react";
+import { GiFlowerPot } from "react-icons/gi";
 
-import { BackgroundImage } from '../common/BackgroundImage';
+import { BackgroundImage } from "../common/BackgroundImage";
 
 export function Home(): ReactElement {
+  usePrefectchTreatments();
+  
   return (
     <Stack align="center" justify="center" height="84vh">
       <BackgroundImage />
