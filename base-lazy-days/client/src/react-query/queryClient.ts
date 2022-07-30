@@ -27,5 +27,8 @@ export const queryClient = new QueryClient({
       refetchOnReconnect: false,
       onSuccess: () => console.log("Success Global"),
     },
+    mutations: {
+      onError: queryErrorHandler,
+    },
   },
 });
